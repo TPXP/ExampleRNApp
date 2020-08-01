@@ -1,4 +1,4 @@
-name: Android debug build
+name: ios Release build
 
 on:
   push:
@@ -15,5 +15,7 @@ jobs:
           node-version: '14'
       - name: Install JS dependencies
         run: yarn install
-      - uses: malinskiy/action-android/install-sdk@release/0.0.7
-      - run: cd android && ./gradlew bundleDebug
+      - name: Install iOS dependencies
+        run: cd ios && pod install
+      - name: Build the iOS app
+        run: fastlane gym --workspace "ios/ExampleRNApp.xcworkspace"
