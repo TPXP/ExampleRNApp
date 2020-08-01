@@ -1,0 +1,13 @@
+diff --git a/node_modules/react-native/scripts/react_native_pods.rb b/node_modules/react-native/scripts/react_native_pods.rb
+index 86afd7f..ea68e5f 100644
+--- a/node_modules/react-native/scripts/react_native_pods.rb
++++ b/node_modules/react-native/scripts/react_native_pods.rb
+@@ -58,7 +58,7 @@ def use_react_native! (options={})
+ end
+ 
+ def use_flipper!(versions = {})
+-  versions['Flipper'] ||= '~> 0.41.1'
++  versions['Flipper'] ||= '~> 0.51.0'
+   versions['Flipper-DoubleConversion'] ||= '1.1.7'
+   versions['Flipper-Folly'] ||= '~> 2.2'
+   versions['Flipper-Glog'] ||= '0.3.6'
