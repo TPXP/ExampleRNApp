@@ -1,7 +1,7 @@
 {
   "name": "ExampleRNApp",
   "version": "0.0.1",
-  "licence": "MIT",
+  "license": "MIT",
   "scripts": {
     "android": "react-native run-android",
     "ios": "react-native run-ios",
