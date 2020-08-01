@@ -18,4 +18,4 @@ jobs:
       - name: Install iOS dependencies
         run: cd ios && pod install
       - name: Build the iOS app
-        run: fastlane gym --workspace "ios/ExampleRNApp.xcworkspace" --scheme "Release"
+        run: fastlane gym --workspace "ios/ExampleRNApp.xcworkspace" --scheme "ExampleRNApp" --configuration Release
