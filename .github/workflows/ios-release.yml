@@ -24,7 +24,8 @@ jobs:
           MATCH_GIT_PRIVATE_KEY: ${{secrets.MATCH_GIT_PRIVATE_KEY}}
           MATCH_PASSWORD: ${{secrets.MATCH_PASSWORD}}
           MATCH_KEYCHAIN_PASSWORD: ${{secrets.MATCH_PASSWORD}}
+          MATCH_KEYCHAIN_NAME: ci_keychain
         run: |
           bundle install
-          bundle exec fastlane run create_keychain password:$MATCH_KEYCHAIN_PASSWORD default_keychain:true name:$GITHUB_SHA
+          bundle exec fastlane run create_keychain password:$MATCH_KEYCHAIN_PASSWORD default_keychain:true name:$MATCH_KEYCHAIN_NAME
           bundle exec fastlane build
