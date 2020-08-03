@@ -26,5 +26,5 @@ jobs:
           MATCH_KEYCHAIN_PASSWORD: ${{secrets.MATCH_PASSWORD}}
         run: |
           bundle install
-          bundle exec fastlane create_keychain password:$MATCH_KEYCHAIN_PASSWORD default_keychain:true name:$GITHUB_SHA
+          bundle exec fastlane run create_keychain password:$MATCH_KEYCHAIN_PASSWORD default_keychain:true name:$GITHUB_SHA
           bundle exec fastlane build
