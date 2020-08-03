@@ -20,6 +20,8 @@ jobs:
       - name: Build the iOS app
         env:
           FASTLANE_SESSION: ${{secrets.FASTLANE_SESSION}}
+          FASTLANE_USER: ${{secrets.FASTLANE_USER}}
+          MATCH_GIT_PRIVATE_KEY: ${{secrets.MATCH_GIT_PRIVATE_KEY}}
+          MATCH_PASSWORD: ${{secrets.MATCH_PASSWORD}}
         run: |
-          fastlane sigh -a fr.tpxp.reactnative.example
-          fastlane gym --workspace "ios/ExampleRNApp.xcworkspace" --scheme "ExampleRNApp" --configuration Release
+          fastlane build
