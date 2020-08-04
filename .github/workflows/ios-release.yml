@@ -27,5 +27,5 @@ jobs:
           MATCH_KEYCHAIN_NAME: ci_keychain
         run: |
           bundle install
-          bundle exec fastlane run create_keychain password:$MATCH_KEYCHAIN_PASSWORD default_keychain:true name:$MATCH_KEYCHAIN_NAME
+          bundle exec fastlane run create_keychain password:$MATCH_KEYCHAIN_PASSWORD default_keychain:true name:$MATCH_KEYCHAIN_NAME timeout:false
           bundle exec fastlane build
